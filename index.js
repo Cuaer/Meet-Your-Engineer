@@ -38,27 +38,44 @@ const promptUser = () => {
   
   const generateHTML = (answers) =>
     `<!DOCTYPE html>
-  <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <title>Document</title>
-  </head>
-  <body>
-    <div class="jumbotron jumbotron-fluid">
-    <div class="container">
-      <h1 class="display-4">Hi! My name is ${answers.name}</h1>
-      <p class="lead">I am from ${answers.location}.</p>
-      <h3>Example heading <span class="badge badge-secondary">Contact Me</span></h3>
-      <ul class="list-group">
-        <li class="list-group-item">My GitHub username is ${answers.github}</li>
-        <li class="list-group-item">LinkedIn: ${answers.linkedin}</li>
-      </ul>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+      <title>Meet Your Engineer!</title>
+    </head>
+    <body>
+      <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1 class="display-4">Hello! Here is the Team you have created!</h1>
+        <p class="team"><img src="https://cdn2.psychologytoday.com/assets/styles/crop_1_1_180x180/public/2020-08/shutterstock_1731284125_0.jpg?itok=A5XU7AAk"/></p>
+        <h3>Employee Team: <span class="badge badge-secondary bg-dark text-danger">Red <!--<img src ="https://www.pngkit.com/png/full/314-3140407_pokeball-8-bit-png-gif.png" class="img-fluid"/>--></span></h3>
+        <ul class="manager">
+            <li class="list-group-item">Name: ${answers.name}</li>
+            <li class="list-group-item">Role: ${answers.role}</li>
+            <li class="list-group-item">Id: ${answers.id}</li>
+            <li class="list-group-item">Email: ${answers.email}</li>
+            <li class="list-group-item">Office Number: ${answers.officenumber}</li>
+        </ul>
+        <ul class="engineer">
+            <li class="list-group-item">Name ${answers.name}</li>
+            <li class="list-group-item">Role: ${answers.role}</li>
+            <li class="list-group-item">Id: ${answers.Id}</li>
+            <li class="list-group-item">Email: ${answers.email}</li>
+            <li class="list-group-item">Github: ${answers.github}</li>
+          </ul>
+          <ul class="intern">
+            <li class="list-group-item">Name ${answers.name}</li>
+            <li class="list-group-item">Role: ${answers.role}</li>
+            <li class="list-group-item">Id: ${answers.id}</li>
+            <li class="list-group-item">Email: ${answers.email}</li>
+            <li class="list-group-item">School: ${answers.school}</li>
+          </ul>
+    
+      </div>
     </div>
-  </div>
-  </body>
-  </html>`;
+    </body>`;
   
   // Bonus using writeFileAsync as a promise
 const init = () => {
